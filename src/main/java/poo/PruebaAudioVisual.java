@@ -2,18 +2,19 @@ package poo;
 import uni1a.*;
 
 public class PruebaAudioVisual {
-	public static void main(String[] args) {
-        System.out.println("Hello from Eclipse!");
-
-        // Crear instancias de las subclases
-        ContenidoAudiovisual[] contenidos = new ContenidoAudiovisual[3];
-        contenidos[0] = new Pelicula("Avatar", 125, "Accion", "20th Century Studios");
-        contenidos[1] = new SerieDeTV("Game of Thrones", 60, "Fantasy", 8);
-        contenidos[2] = new Documental("Cosmos", 45, "Science", "Astronomy");
-
-        // Mostrar los detalles de cada contenido audiovisual
-        for (ContenidoAudiovisual contenido : contenidos) {
-            contenido.mostrarDetalles();
-        }
+    public static void main(String[] args) {
+        Actor actor = new Actor("Sam Worthington");
+        Investigador investigadora = new Investigador("Ana Torres", "Astronomia");
+        Pelicula pelicula = new Pelicula("Avatar", 162, "Ciencia ficcion", "20th Century Studios");
+        pelicula.agregarActor(actor);
+        SerieDeTV serie = new SerieDeTV("Cosmos: una odisea", 45, "Divulgacion", 0);
+        serie.agregarTemporada(1, 13);
+        serie.agregarTemporada(2, 13);
+        Documental documental = new Documental("El universo", 50, "Ciencia", "Astronomia");
+        documental.agregarInvestigador(investigadora);
+        PodcastAudiovisual podcast = new PodcastAudiovisual("Conversaciones del cosmos", 30, "Divulgacion", "Ciencia Hoy", investigadora);
+        MakingOf makingOf = new MakingOf("Detras de Avatar", 25, "Documental", "Luis Perez", pelicula);
+        ContenidoAudiovisual[] contenidos = { pelicula, serie, documental, podcast, makingOf };
+        for (ContenidoAudiovisual contenido : contenidos) contenido.mostrarDetalles();
     }
 }
