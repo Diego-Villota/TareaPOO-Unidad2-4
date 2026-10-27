@@ -11,13 +11,13 @@ public class SerieDeTV extends ContenidoAudiovisual {
     public void agregarTemporada(int numero, int episodios) {
         if (detalleTemporadas.stream().anyMatch(t -> t.getNumero() == numero)) throw new IllegalArgumentException("Temporada duplicada");
         detalleTemporadas.add(new Temporada(numero, episodios));
-        temporadas = detalleTemporadas.size();
+        temporadas = Math.max(temporadas, numero);
     }
     public java.util.List<Temporada> getDetalleTemporadas() { return java.util.Collections.unmodifiableList(detalleTemporadas); }
 
     public SerieDeTV(String titulo, int duracionEnMinutos, String genero, int temporadas) {
         super(titulo, duracionEnMinutos, genero);
-        this.temporadas = temporadas;
+        setTemporadas(temporadas);
     }
 
     public int getTemporadas() {
@@ -25,6 +25,8 @@ public class SerieDeTV extends ContenidoAudiovisual {
     }
 
     public void setTemporadas(int temporadas) {
+        if (temporadas < 0 || detalleTemporadas.stream().anyMatch(t -> t.getNumero() > temporadas))
+            throw new IllegalArgumentException("Cantidad de temporadas invalida");
         this.temporadas = temporadas;
     }
     
