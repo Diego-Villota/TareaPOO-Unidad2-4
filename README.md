@@ -2,7 +2,7 @@
 
 Proyecto de **Programación Orientada a Objetos** (Universidad Politécnica Salesiana) que evoluciona el catálogo audiovisual de la Unidad 2 incorporando persistencia en archivos **CSV**, refactorización bajo principios de **Código Limpio** y **SOLID**, arquitectura **MVC** en consola y pruebas unitarias con **JUnit 5**.
 
-Repositorio: https://github.com/Diego-Villota/TareaPOO-Unidad2-5
+Repositorio: https://github.com/Diego-Villota/TareaPOO-Unidad2-4
 
 ## Cambios realizados por etapa
 
