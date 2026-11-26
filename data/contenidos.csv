@@ -1,0 +1,9 @@
+tipo,id,titulo,duracion,genero,campo_extra,relaciones
+PELICULA,1,Avatar,162,Ciencia ficcion,20th Century Studios,Sam Worthington;Zoe Saldana
+PELICULA,2,Interestelar,169,Ciencia ficcion,Paramount Pictures,Matthew McConaughey;Anne Hathaway
+SERIE,3,"Cosmos: una odisea",45,Divulgacion,2,1:13;2:13
+SERIE,4,Dark,53,Suspenso,3,1:10;2:8;3:8
+DOCUMENTAL,5,El universo,50,Ciencia,Astronomia,Ana Torres|Astronomia;Carlos Mendez|Astrofisica
+DOCUMENTAL,6,Planeta Tierra,60,Naturaleza,Ecologia,Elena Morales|Biologia Marina
+PODCAST,7,Conversaciones del cosmos,30,Divulgacion,Ciencia Hoy,Ana Torres|Astronomia
+MAKING_OF,8,Detras de Avatar,25,Documental,Luis Perez,1
